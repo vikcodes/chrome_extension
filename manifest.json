@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "meow",
+  "description": "meow-meow-meow",
+  "version": "1.0",
+  "background": {
+        "scripts": [
+            "background.js", "contentscript.js", "js/script.js"
+        ]
+    },
+
+  "browser_action": {
+  "default_title": "Test"
+  },
+
+  "content_scripts": [
+   {
+     "matches": ["<all_urls>"],
+     "js": ["contentscript.js", "background.js"]
+   }
+  ],
+
+  "permissions": ["activeTab"]
+
+}
